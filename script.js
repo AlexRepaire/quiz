@@ -10,7 +10,7 @@ let btnTotal = document.getElementById("total");
 let bonneReponseDiv = document.getElementById("bonneReponse");
 
 /*******START JS********/
-/*
+
 btnStart.addEventListener("click", function () {
    this.classList.add("none");
    btnNext.classList.remove("none");
@@ -19,65 +19,58 @@ btnStart.addEventListener("click", function () {
    li[next].classList.add("up");
 });
 
- */
 
 /********START Jquery*********/
-
+/*
 let nextJQ = $(".suivant");
-
 $("#commencer").click(function () {
     next++;
    $(this).addClass("none");
    nextJQ.eq(next).removeClass("none");
    li2.eq(next).addClass("up");
 });
+ */
 
 /*****NEXT JS*******/
 
-/*
 btnNext.addEventListener("click", function () {
     next++;
     li[next].classList.add("up");
     li[before = next-1].classList.remove("up");
 });
 
-
- */
-
 /**********NEXT Jquery**********/
-
+/*
 $("#suivant").click(function () {
    next++;
    li2.eq(next).addClass("up");
    li2.eq(next=next-1).removeClass("up");
 });
-
-
-
-/*
-btnBefore.addEventListener("click", function () {
-    next--;
-    li[next].classList.remove("up");
-    li[before = next-1].classList.add("up");
-});
-
 */
 
-//VERIFICATION DE MES REPONSES
+
+
+btnBefore.addEventListener("click", function () {
+    next--;
+    li[next].classList.add("up");
+    li[before = next+1].classList.remove("up");
+});
+
+
+    /*********VERIFICATION DE MES REPONSES*****************/
 
 /***********Jquery***********/
-
+/*
 $("#total").click(function () {
     let input = $("input[value=1]").is(":checked");
     $("#bonneReponse").text(input.length);
 });
-
+*/
 /********JS*************/
-/*
+
 btnTotal.addEventListener("click",function () {
     let input = [];
     input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
     let bonneReponse = input.length;
     bonneReponseDiv.innerHTML = bonneReponse;
 });
-*/
