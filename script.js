@@ -14,11 +14,9 @@ let bonneReponseDiv = document.getElementById("bonneReponse");
 btnStart.addEventListener("click", function () {
    this.classList.add("none");
    btnNext.classList.remove("none");
-   btnBefore.classList.remove("none");
    next++;
    li[next].classList.add("up");
 });
-
 
 /********START Jquery*********/
 /*
@@ -37,6 +35,18 @@ btnNext.addEventListener("click", function () {
     next++;
     li[next].classList.add("up");
     li[before = next-1].classList.remove("up");
+
+    /*********RESULTAT***********/
+
+    if (next==12){
+        btnNext.classList.add("none");
+        let input = [];
+        input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
+        let bonneReponse = input.length;
+        bonneReponseDiv.innerHTML = bonneReponse;
+    }else {
+        defaultStatus;
+    }
 });
 
 /**********NEXT Jquery**********/
@@ -67,10 +77,11 @@ $("#total").click(function () {
 });
 */
 /********JS*************/
-
+/*
 btnTotal.addEventListener("click",function () {
     let input = [];
     input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
     let bonneReponse = input.length;
     bonneReponseDiv.innerHTML = bonneReponse;
 });
+ */
