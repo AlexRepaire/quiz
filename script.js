@@ -14,7 +14,6 @@ let bonneReponseDiv = document.getElementById("bonneReponse");
 btnStart.addEventListener("click", function () {
    this.classList.add("none");
    btnNext.classList.remove("none");
-   next++;
    li[next].classList.add("up");
 });
 
@@ -46,8 +45,6 @@ btnNext.addEventListener("click", function () {
         input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
         let bonneReponse = input.length;
         bonneReponseDiv.innerHTML = bonneReponse;
-    }else {
-        defaultStatus;
     }
 });
 
@@ -68,8 +65,6 @@ btnBefore.addEventListener("click", function () {
     li[before = next+1].classList.remove("up");
     if (next===1){
         btnBefore.classList.remove("up");
-    }else{
-        defaultStatus;
     }
 });
 
