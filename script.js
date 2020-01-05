@@ -48,7 +48,7 @@ $("#suivant").click(function () {
 });
 */
 
-
+/********PRECEDENT JS**********/
 
 btnBefore.addEventListener("click", function () {
     next--;
