@@ -35,11 +35,13 @@ btnNext.addEventListener("click", function () {
     next++;
     li[next].classList.add("up");
     li[before = next-1].classList.remove("up");
+    btnBefore.classList.add("up");
 
     /*********RESULTAT***********/
 
-    if (next==12){
+    if (next===12){
         btnNext.classList.add("none");
+        btnBefore.classList.remove("up");
         let input = [];
         input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
         let bonneReponse = input.length;
@@ -64,6 +66,11 @@ btnBefore.addEventListener("click", function () {
     next--;
     li[next].classList.add("up");
     li[before = next+1].classList.remove("up");
+    if (next===1){
+        btnBefore.classList.remove("up");
+    }else{
+        defaultStatus;
+    }
 });
 
 
@@ -85,3 +92,4 @@ btnTotal.addEventListener("click",function () {
     bonneReponseDiv.innerHTML = bonneReponse;
 });
  */
+
