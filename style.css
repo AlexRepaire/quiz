@@ -1,0 +1,40 @@
+h3{
+    color: brown;
+    text-decoration: underline;
+    font-weight: bold;
+}
+button{
+    font-size: 20px;
+    color: steelblue;
+    background-color: white;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: steelblue;
+    color: white;
+    transition-duration: 1s;
+}
+.none{
+    display: none;
+}
+.up{
+    display: block;
+}
+span{
+    font-size: 25px;
+    font-family: Cambria;
+    color: steelblue;
+}
+label{
+    display: flex;
+    margin-top: 30px;
+}
+#bonneReponse, #mauvaiseReponse{
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
+}
+#resultat{
+    display: flex;
+}
