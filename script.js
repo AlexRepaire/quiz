@@ -8,6 +8,7 @@ let btnBefore = document.getElementById("précédent");
 let btnStart = document.getElementById("commencer");
 let btnTotal = document.getElementById("total");
 let bonneReponseDiv = document.getElementById("bonneReponse");
+let mauvaiseReponseDiv = document.getElementById("mauvaiseReponse");
 
 /*******START JS********/
 
@@ -38,13 +39,15 @@ btnNext.addEventListener("click", function () {
 
     /*********RESULTAT***********/
 
-    if (next===12){
+    if (next===13){
         btnNext.classList.add("none");
         btnBefore.classList.remove("up");
         let input = [];
         input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
         let bonneReponse = input.length;
-        bonneReponseDiv.innerHTML = bonneReponse;
+        let mauvaiseReponse = li.length;
+        bonneReponseDiv.innerHTML = "Tu as eu "+bonneReponse+" bonne réponses";
+        mauvaiseReponseDiv.innerHTML ="Tu as eu"+mauvaiseReponse-bonneReponse+" mauvaises réponses";
     }
 });
 
@@ -85,6 +88,7 @@ btnTotal.addEventListener("click",function () {
     input = Array.from(document.querySelectorAll('input[value="1"]:checked'));
     let bonneReponse = input.length;
     bonneReponseDiv.innerHTML = bonneReponse;
+
 });
  */
 
